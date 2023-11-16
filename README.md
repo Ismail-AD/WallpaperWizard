@@ -12,10 +12,13 @@
 
 Wallpaper Wizard excels with:
 
-  -Diverse wallpaper categories. 🎨<br>
-  -Seamless Unsplash API integration. 🌐<br>
-  -Intuitive search functionality. 🔍<br>
-  -Set wallpapers for lock & home screens. 📱<br>
-  -Download and favorite options for personalization. 💾🌟<br>
+-Diverse wallpaper categories. 🎨<br>
+- Clean and Simple Material UI. 🎨
+- Dark mode. 🌗
+- Jetpack Compose UI. 🖌
+-Seamless Unsplash API integration. 🌐<br>
+-Intuitive search functionality. 🔍<br>
+-Set wallpapers for lock & home screens. 📱<br>
+-Download and favorite options for personalization. 💾🌟<br>
 
 
