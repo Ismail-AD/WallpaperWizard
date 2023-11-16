@@ -7,9 +7,4 @@
   <img alt="material" src="https://custom-icon-badges.demolab.com/badge/material%20you-lightblue?style=for-the-badge&logoColor=333&logo=material-you"/></a>
   </br>
   </p>
-<h4 align="center">
-Wallpaper Wizard, your go-to for stunning wallpapers! Explore diverse categories using Unsplash API,
-search for personalized options, and effortlessly set wallpapers for both lock and home screens. 
-Download, favorite, and redefine your device's aesthetic with ease. Your perfect wallpaper, just a tap away.
-<br>
-</h4>
+
