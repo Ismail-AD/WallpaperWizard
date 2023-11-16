@@ -12,7 +12,7 @@
 
 Wallpaper Wizard excels with:
 
-  -Diverse wallpaper categories. 🎨
+  -Diverse wallpaper categories. 🎨<br>
   -Seamless Unsplash API integration. 🌐
   -Intuitive search functionality. 🔍
   -Set wallpapers for lock & home screens. 📱
