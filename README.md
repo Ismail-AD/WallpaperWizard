@@ -8,3 +8,15 @@
   </br>
   </p>
 
+# Features ✨
+
+Wallpaper Wizard excels with:
+
+    Diverse wallpaper categories. 🎨
+    Seamless Unsplash API integration. 🌐
+    Intuitive search functionality. 🔍
+    Set wallpapers for lock & home screens. 📱
+    Download and favorite options for personalization. 💾🌟
+    Elevate your device's aesthetic effortlessly. 🌌✨
+
+
