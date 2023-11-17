@@ -20,7 +20,8 @@ private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFFB9A6B5),
     background = Color(0xFF161B2E),
     onBackground = Color.White,
-    surface = Color(0xff393F44),
+    surface = Color(0xFF161B2E),
+    tertiary = Color(0xff393F44),
     onSurface = Color.White,
     inverseSurface = Color(0xFF242B44),
     inverseOnSurface = Color(0xFFADACAD),
@@ -37,7 +38,8 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color.Black,
     inverseSurface = Color(0xFF242B44),
     inverseOnSurface = Color(0xff625F62),
-    secondary = SecondaryLight
+    secondary = SecondaryLight,
+    tertiary = Color.White
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -58,22 +60,21 @@ fun WallpaperWizardTheme(
     content: @Composable () -> Unit,
 ) {
     val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        darkTheme -> {
+            DarkColorScheme
         }
-
-        darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            window.statusBarColor = colorScheme.background.toArgb()
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
+                !darkTheme // not darkTheme makes the status bar icons visible
         }
     }
+
 
     MaterialTheme(
         colorScheme = colorScheme,

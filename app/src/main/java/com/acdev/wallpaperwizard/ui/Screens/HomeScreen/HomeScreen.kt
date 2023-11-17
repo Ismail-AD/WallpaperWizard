@@ -8,6 +8,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -34,6 +35,8 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SearchBar
+import androidx.compose.material3.SearchBarColors
+import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -137,9 +140,10 @@ fun HomeScreen(
                     placeholder = {
                         Text(
                             text = "Search Wallpaper",
-                            fontSize = 16.sp, color = Color(0xff625F62)
+                            fontSize = 16.sp, color = if(!isSystemInDarkTheme()) Color(0xff625F62) else Color.White.copy(alpha = 0.5F)
                         )
                     },
+                    colors = SearchBarDefaults.colors(containerColor = MaterialTheme.colorScheme.tertiary),
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                     trailingIcon = {
                         if (homeScreenState.textToSearch.trim().isNotEmpty())
@@ -195,7 +199,7 @@ fun HomeScreen(
                 }
                 if (images.loadState.refresh is LoadState.Loading) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator(color = MaterialTheme.colorScheme.inverseSurface)
+                        CircularProgressIndicator(color = MaterialTheme.colorScheme.inverseOnSurface)
                     }
                 }
                 Text(

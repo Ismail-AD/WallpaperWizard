@@ -21,8 +21,7 @@ fun TopBar(
     tailIconID: ImageVector? = null,
 ) {
     TopAppBar(
-        title = { Text(text = title, color = MaterialTheme.colorScheme.onBackground) },
-        modifier = Modifier.background(MaterialTheme.colorScheme.background), navigationIcon = {
+        title = { Text(text = title, color = MaterialTheme.colorScheme.onBackground) }, modifier = Modifier.background(MaterialTheme.colorScheme.background), navigationIcon = {
             headerIconID?.let { hIcon ->
                 IconButton(onClick = { navigationIconFunction.invoke() }) {
                     Icon(
