@@ -326,8 +326,8 @@ fun singleSheetItem(name: String, icon: ImageVector, onCLick: () -> Unit) {
             .clickable { onCLick() }
             .padding(vertical = 10.dp, horizontal = 20.dp),
     ) {
-        Icon(imageVector = icon, contentDescription = "")
-        Text(text = name, modifier = Modifier.padding(start = 20.dp))
+        Icon(imageVector = icon, contentDescription = "", tint = MaterialTheme.colorScheme.onBackground)
+        Text(text = name, modifier = Modifier.padding(start = 20.dp), color = MaterialTheme.colorScheme.onBackground)
     }
 }
 
