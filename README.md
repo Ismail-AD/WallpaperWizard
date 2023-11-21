@@ -8,6 +8,10 @@
   </br>
   </p>
 
+# Demo
+
+https://github.com/Ismail-AD/WallpaperWizard/assets/99780212/e1984ba2-d756-4447-a46a-b52f405bf8f8
+
 # Features ✨
 
 Wallpaper Wizard excels with:
